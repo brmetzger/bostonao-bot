@@ -1,5 +1,6 @@
 //Require internal modules
 const PHRASES = require("./jesse.json");
+const SLANG = require("./slang.json");
 
 //Replace variables within a phrase
 function handlePhrase(message,phrase) {
@@ -8,6 +9,7 @@ function handlePhrase(message,phrase) {
     //Make this more efficient later, especially if more conditions are added.
     phrase = phrase.replaceAll("${USER}",nickname);
     phrase = phrase.replaceAll("${USERCAPS}",nickname.toUpperCase());
+    phrase = phrase.replaceAll("${SLANG}",SLANG[Math.floor(Math.random() * Math.floor(SLANG.length))]);
     return phrase;
 };
 

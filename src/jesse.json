@@ -3,9 +3,14 @@
     "My daughter said my body looks like a snail.",
     "When I was your age, I wasn't as on fire as you guys.",
     "My freshman year, I wasn't like you guys!",
-    "Dude, what does \"snatch your kneecaps\" mean?",
+    "Dude, what does \"${SLANG}\" mean?",
     "Tressa from HAWAII!",
     "Yo Caroline, you know the Samoans?",
     "Whaddup ${USERCAPS}?",
-    "We got ${USER} in the house!"
+    "We got ${USER} in the house!",
+    "Dude, what's an OnlyFans?",
+    "Dude, I don't get this whole Discord thing.",
+    "Wow ${USER}, I expected more.",
+    "How does that hit you man?",
+    "Where they at tho?"
 ]
