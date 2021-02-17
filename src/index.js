@@ -5,10 +5,13 @@ const DISCORD = require("discord.js");
 //Require internal modules
 let clientInfo = require("./client.json");
 let config = require("./config.json");
-let Util = require("./Util.js");
+let Jesse = require("./jesse.js");
+let Util = require("./util.js");
 
 //Load the modules set up for commands
-const COMMAND_MODULES = {};
+const COMMAND_MODULES = {
+    [Jesse.Command]:Jesse
+};
 const ROLES = {
     "minecraft":"811378789786845204",
     "wandavision":"811378062524022806"
