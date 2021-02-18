@@ -16,6 +16,7 @@ const COMMAND_MODULES = {
     [Memes.Command]:Memes
 };
 const ROLES = {
+    "🏙️":"812008721450008576",
     "minecraft":"811378789786845204",
     "wandavision":"811378062524022806"
 };
@@ -56,6 +57,7 @@ client.on("ready", async () => {
         .setThumbnail("https://cdn.discordapp.com/icons/807751336959148060/4b862d0e99235badcc76c28c57e21f06.webp?size=256")
         .setDescription("To prevent unwanted notifications, we've added roles you can subscribe to to get certain notifications! Just add a reaction to this message to get notified when something happens regarding one of these roles.")
         .addFields(
+            {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
             {name:"<:wandavision:811359535817424907> WandaVision",value:"If you're interested in watching WandaVision with others here, just react to this message with \"<:wandavision:811359535817424907>\""},
         )
