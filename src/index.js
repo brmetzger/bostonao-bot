@@ -8,6 +8,7 @@ let config = require("./config.json");
 let Jesse = require("./jesse.js");
 let Memes = require("./memes.js");
 let Util = require("./util.js");
+const STATUSES = require("./data/status.json");
 
 //Load the modules set up for commands
 const COMMAND_MODULES = {
@@ -19,6 +20,25 @@ const ROLES = {
     "wandavision":"811378062524022806"
 };
 
+//Update the bot's status
+/*
+    The statuses are contained in src/data/status.json, and have the following formats:
+    COMPETING: Competing in...
+    LISTENING: Listening to...
+    PLAYING: Playing...
+    STREAMING: Playing...
+    WATCHING: Watching...
+    These are the status formats currently supported by Discord.
+    Custom statuses are not available for bots at the time of writing this. (02/18/2021)
+*/
+function updateStatus() {
+    client.user.setPresence({
+        activity:Util.randomFrom(STATUSES)
+    });
+    //Change the status every minute
+    setTimeout(updateStatus,60000);
+};
+
 //Bot logged in, perform initial setup
 client.on("ready", async () => {
     console.log(`Logged in as ${client.user.tag} using ID ${client.user.id}!`);
@@ -28,6 +48,8 @@ client.on("ready", async () => {
         config.RoleMessage = new_role_message.id;
         Util.writeJSON("./config.json",config);
     };
+
+    //Write the role message
     client.channels.cache.get(config.RoleChannel).messages.fetch(config.RoleMessage).then(role_message => {role_message.edit(new DISCORD.MessageEmbed()
         .setColor("5f9afa")
         .setTitle("React to gain access to specific roles")
@@ -38,6 +60,9 @@ client.on("ready", async () => {
             {name:"<:wandavision:811359535817424907> WandaVision",value:"If you're interested in watching WandaVision with others here, just react to this message with \"<:wandavision:811359535817424907>\""},
         )
     )});
+
+    //Begin the status loop.
+    updateStatus();
 });
 
 client.on("message",(message) => {

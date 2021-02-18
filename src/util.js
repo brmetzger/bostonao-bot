@@ -4,7 +4,7 @@ const PATH = require("path");
 
 //Get a random element from an array
 exports.randomFrom = function(useArray) {
-    return userArray[Math.floor(Math.random() * useArray.length)];
+    return useArray[Math.floor(Math.random() * useArray.length)];
 };
 
 //Write to a JSON file
