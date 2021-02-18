@@ -38,8 +38,8 @@ function help(client,message,args) {
 
 //Post a meme
 function postmeme(client,message,args) {
-    message.reply(MEME_PHRASES[Math.floor(Math.random() * Math.floor(MEME_PHRASES.length))],{
-        files:[memes[args[1].toLowerCase()][Math.floor(Math.random() * Math.floor(memes[args[1].toLowerCase()].length))]]
+    message.reply(Util.randomFrom(MEME_PHRASES),{
+        files:[Util.randomFrom(memes[args[1].toLowerCase()])]
     });
 };
 
