@@ -6,11 +6,13 @@ const DISCORD = require("discord.js");
 let clientInfo = require("./client.json");
 let config = require("./config.json");
 let Jesse = require("./jesse.js");
+let Memes = require("./memes.js");
 let Util = require("./util.js");
 
 //Load the modules set up for commands
 const COMMAND_MODULES = {
-    [Jesse.Command]:Jesse
+    [Jesse.Command]:Jesse,
+    [Memes.Command]:Memes
 };
 const ROLES = {
     "minecraft":"811378789786845204",

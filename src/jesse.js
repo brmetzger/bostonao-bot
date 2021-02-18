@@ -18,5 +18,5 @@ exports.Execute = function(client,message,args) {
     message.channel.send(handlePhrase(message,PHRASES[Math.floor(Math.random() * Math.floor(PHRASES.length))]));
 };
 
-//Set up the commands
+//Set up the command
 exports.Command = "jesse";
