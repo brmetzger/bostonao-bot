@@ -45,6 +45,7 @@ client.on("message",(message) => {
         let args = message.content.split(" ");
         if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")]) {
             if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands) {
+                args[1] = args[1] || "help";
                 if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands[args[1].toLowerCase()]) {
                     COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands[args[1].toLowerCase()].Execute(client,message,args);
                 };
