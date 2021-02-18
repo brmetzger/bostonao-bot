@@ -2,6 +2,9 @@
 const DISCORD = require("discord.js");
 const FS = require("fs");
 
+//Require internal modules
+let Util = require("./util.js");
+
 //Load all the memes
 let memes = {};
 const MEME_PHRASES = [
