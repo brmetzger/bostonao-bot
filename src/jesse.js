@@ -1,6 +1,6 @@
 //Require internal modules
-const PHRASES = require("./jesse.json");
-const SLANG = require("./slang.json");
+const PHRASES = require("./data/jesse.json");
+const SLANG = require("./data/slang.json");
 
 //Replace variables within a phrase
 function handlePhrase(message,phrase) {
