@@ -1,4 +1,5 @@
-const axios = require("axios");
+//Require external modules
+const AXIOS = require("axios");
 const DISCORD = require("discord.js");
 
 function help(client,message,args) {
@@ -8,19 +9,20 @@ function help(client,message,args) {
     }
 
     message.reply(new DISCORD.MessageEmbed()
-                      .setTitle("Bible Commands")
-                      .setDescription("Go read your Bible")
-                      .addFields(fields)
-    )
+        .setAuthor("Emma Price","https://avatars.githubusercontent.com/u/15811327?s=460&u=a479787e5fb1e805b48f1c815d3f897feeb34125&v=4","https://github.com/pricee")
+        .setTitle("Bible Commands")
+        .setDescription("Go read your Bible")
+        .addFields(fields)
+    );
 }
 
 async function verseOfTheDay(client, message, args) {
-    const { data : { verse: { details: { text, reference } } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json");
+    const { data : { verse: { details: { text, reference } } } } = await AXIOS.get("https://beta.ourmanna.com/api/v1/get/?format=json");
     message.reply(`"${text}" -- ${reference}`);
 }
 
 async function randomVerse(client, message, args) {
-    const { data : { verse: { details: { text, reference } } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json&order=random");
+    const { data : { verse: { details: { text, reference } } } } = await AXIOS.get("https://beta.ourmanna.com/api/v1/get/?format=json&order=random");
     message.reply(`"${text}" -- ${reference}`);
 }
 
@@ -32,7 +34,7 @@ async function verse(client, message, args) {
     const book = args[2];
     const chapterAndVerse = args[3];
 
-    const {data : { reference, text, error } } = await axios.get(`https://bible-api.com/${book}+${chapterAndVerse}`);
+    const {data : { reference, text, error } } = await AXIOS.get(`https://bible-api.com/${book}+${chapterAndVerse}`);
 
     if (error) {
         message.reply(`Invalid scripture input. Try "!bible verse BOOK CHAPTER:VERSE(S)"`);
