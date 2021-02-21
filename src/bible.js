@@ -2,6 +2,10 @@
 const AXIOS = require("axios");
 const DISCORD = require("discord.js");
 
+//Require internal modules
+let Util = require("./util.js");
+let VERSES = require("./data/verses.json");
+
 function help(client,message,args) {
     let fields = [];
     for (let command in exports.SubCommands) {
@@ -44,6 +48,20 @@ async function verse(client, message, args) {
     }
 }
 
+//absolute chaos
+async function trueRandomVerse(client, message, args) {
+    const book = Util.randomFrom(VERSES);
+    const chapter = Math.floor(Math.random() * book.Chapters.length);
+    const verse = Math.floor(Math.random() * (book.Chapters[chapter] - 1)) + 1;
+    const {data : { reference, text, error } } = await AXIOS.get(`https://bible-api.com/${book.Name}+${chapter + 1}:${verse}`);
+    if (error) {
+        message.reply(`Invalid scripture input. Please contact a developer (${book.Name}+${chapter + 1}:${verse})`);
+    } else {
+        let cleanText = text.replace(/^\s+|\s+$/g, '');
+        message.reply(`"${cleanText}" -- ${reference}`);
+    }
+};
+
 exports.Command = "bible";
 
 exports.SubCommands = {
@@ -62,5 +80,9 @@ exports.SubCommands = {
     verse: {
         Execute: verse,
         Description: "Be super spiritual and share what scripture(s) you read today! Format: BOOK CHAPTER:VERSE(S)"
+    },
+    truerandom:{
+        Execute: trueRandomVerse,
+        Description: "For those seeking true chaos. Generates a truly random verse. Use at your own risk."
     }
 };
