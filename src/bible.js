@@ -15,12 +15,12 @@ function help(client,message,args) {
 }
 
 async function verseOfTheDay(client, message, args) {
-    const { verse: { details: { text, reference } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json");
+    const { data : { verse: { details: { text, reference } } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json");
     message.reply(`"${text}" -- ${reference}`);
 }
 
 async function randomVerse(client, message, args) {
-    const { verse: { details: { text, reference } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json&order=random");
+    const { data : { verse: { details: { text, reference } } } } = await axios.get("https://beta.ourmanna.com/api/v1/get/?format=json&order=random");
     message.reply(`"${text}" -- ${reference}`);
 }
 
@@ -32,12 +32,13 @@ async function verse(client, message, args) {
     const book = args[2];
     const chapterAndVerse = args[3];
 
-    const { reference, text, error } = axios.get(`https://bible-api.com/${book}+${chapterAndVerse}`);
+    const {data : { reference, text, error } } = await axios.get(`https://bible-api.com/${book}+${chapterAndVerse}`);
 
     if (error) {
         message.reply(`Invalid scripture input. Try "!bible verse BOOK CHAPTER:VERSE(S)"`);
     } else {
-        message.reply(`"${text}" -- ${reference}`);
+        let cleanText = text.replace(/^\s+|\s+$/g, '');
+        message.reply(`"${cleanText}" -- ${reference}`);
     }
 }
 
