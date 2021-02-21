@@ -7,13 +7,15 @@ let clientInfo = require("./client.json");
 let config = require("./config.json");
 let Jesse = require("./jesse.js");
 let Memes = require("./memes.js");
+let Bible = require("./bible.js");
 let Util = require("./util.js");
 const STATUSES = require("./data/status.json");
 
 //Load the modules set up for commands
 const COMMAND_MODULES = {
     [Jesse.Command]:Jesse,
-    [Memes.Command]:Memes
+    [Memes.Command]:Memes,
+    [Bible.Command]:Bible
 };
 const ROLES = {
     "🏙️":"812008721450008576",
@@ -67,17 +69,19 @@ client.on("ready", async () => {
     updateStatus();
 });
 
-client.on("message",(message) => {
+client.on("message", async (message) => {
     if (message.content.startsWith(config.CommandPrefix)) {
         let args = message.content.split(" ");
-        if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")]) {
-            if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands) {
+        const command = args[0].replace(config.CommandPrefix,"");
+        if (COMMAND_MODULES[command]) {
+            if (COMMAND_MODULES[command].SubCommands) {
                 args[1] = args[1] || "help";
-                if (COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands[args[1].toLowerCase()]) {
-                    COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].SubCommands[args[1].toLowerCase()].Execute(client,message,args);
+                const subCommand = args[1].toLowerCase();
+                if (COMMAND_MODULES[command].SubCommands[subCommand]) {
+                    await COMMAND_MODULES[command].SubCommands[subCommand].Execute(client,message,args);
                 };
             } else {
-                COMMAND_MODULES[args[0].replace(config.CommandPrefix,"")].Execute(client,message,args);
+                await COMMAND_MODULES[command].Execute(client,message,args);
             };
         };
     };
