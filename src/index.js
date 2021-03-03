@@ -22,6 +22,14 @@ const ROLES = {
         ID:"812008721450008576",
         Name:"In-Person Meetups"
     },
+    "amongus":{
+        ID:"816673017857179699",
+        Name:"Among Us"
+    },
+    "falconwinter":{
+        ID:"816672924161146882",
+        Name:"The Falcon and the Winter Soldier"
+    },
     "minecraft":{
         ID:"811378789786845204",
         Name:"Minecraft"
@@ -29,6 +37,10 @@ const ROLES = {
     "wandavision":{
         ID:"811378062524022806",
         Name:"WandaVision"
+    },
+    "wut":{
+        ID:"816673077919481926",
+        Name:"Bot Development"
     }
 };
 
@@ -68,8 +80,11 @@ client.on("ready", async () => {
         .setThumbnail("https://cdn.discordapp.com/icons/807751336959148060/4b862d0e99235badcc76c28c57e21f06.webp?size=256")
         .setDescription("To prevent unwanted notifications, we've added roles you can subscribe to to get certain notifications! Just add a reaction to this message to get notified when something happens regarding one of these roles.")
         .addFields(
+            {name:"<:amongus:816672242540871690> Among Us",value:"If you're interested in playing Among Us with others here, just react to this message with \"<:amongus:816672242540871690>\""},
+            {name:"<:wut:807763650311356487> Bot Development",value:"If you're interested in partaking in or getting updates on the development of this bot, just react to this message with \"<:wut:807763650311356487>\""},
             {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
+            {name:"<:falconwinter:816672565774778468> The Falcon and the Winter Soldier",value:"If you're interested in watching The Falcon and the Winter Soldier with others here, just react to this message with \"<:falconwinter:816672565774778468>\""},
             {name:"<:wandavision:811359535817424907> WandaVision",value:"If you're interested in watching WandaVision with others here, just react to this message with \"<:wandavision:811359535817424907>\""},
         )
     )});
