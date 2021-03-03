@@ -19,16 +19,16 @@ const COMMAND_MODULES = {
 };
 const ROLES = {
     "🏙️":{
-        ID = "812008721450008576",
-        Name = "In-Person Meetups"
+        ID:"812008721450008576",
+        Name:"In-Person Meetups"
     },
     "minecraft":{
-        ID = "811378789786845204",
-        Name = "Minecraft"
+        ID:"811378789786845204",
+        Name:"Minecraft"
     },
     "wandavision":{
-        ID = "811378062524022806",
-        Name = "WandaVision"
+        ID:"811378062524022806",
+        Name:"WandaVision"
     }
 };
 
