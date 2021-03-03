@@ -18,9 +18,18 @@ const COMMAND_MODULES = {
     [Bible.Command]:Bible
 };
 const ROLES = {
-    "🏙️":"812008721450008576",
-    "minecraft":"811378789786845204",
-    "wandavision":"811378062524022806"
+    "🏙️":{
+        ID = "812008721450008576",
+        Name = "In-Person Meetups"
+    },
+    "minecraft":{
+        ID = "811378789786845204",
+        Name = "Minecraft"
+    },
+    "wandavision":{
+        ID = "811378062524022806",
+        Name = "WandaVision"
+    }
 };
 
 //Update the bot's status
@@ -92,13 +101,17 @@ client.on("messageReactionAdd", async (reaction, user) => {
         console.log(reaction.emoji.name);
     };
     if (reaction.message.id == config.RoleMessage && ROLES[reaction.emoji.name]) {
-        reaction.message.guild.member(user).roles.add(ROLES[reaction.emoji.name]);
+        reaction.message.guild.member(user).roles.add(ROLES[reaction.emoji.name.ID]).then(() => {
+            user.send(`Given you the **${ROLES[reaction.emoji.name.Name]}** role in the BostonAO server.`);
+        });;
     };
 });
 
 client.on("messageReactionRemove", async (reaction, user) => {
     if (reaction.message.id == config.RoleMessage && ROLES[reaction.emoji.name]) {
-        reaction.message.guild.member(user).roles.remove(ROLES[reaction.emoji.name]);
+        reaction.message.guild.member(user).roles.remove(ROLES[reaction.emoji.name.ID]).then(() => {
+            user.send(`Removed the **${ROLES[reaction.emoji.name.Name]}** role in the BostonAO server.`);
+        });
     };
 });
 
