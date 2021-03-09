@@ -34,10 +34,6 @@ const ROLES = {
         ID:"811378789786845204",
         Name:"Minecraft"
     },
-    "wandavision":{
-        ID:"811378062524022806",
-        Name:"WandaVision"
-    },
     "wut":{
         ID:"816673077919481926",
         Name:"Bot Development"
@@ -84,8 +80,7 @@ client.on("ready", async () => {
             {name:"<:wut:807763650311356487> Bot Development",value:"If you're interested in partaking in or getting updates on the development of this bot, just react to this message with \"<:wut:807763650311356487>\""},
             {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
-            {name:"<:falconwinter:816672565774778468> The Falcon and the Winter Soldier",value:"If you're interested in watching The Falcon and the Winter Soldier with others here, just react to this message with \"<:falconwinter:816672565774778468>\""},
-            {name:"<:wandavision:811359535817424907> WandaVision",value:"If you're interested in watching WandaVision with others here, just react to this message with \"<:wandavision:811359535817424907>\""},
+            {name:"<:falconwinter:816672565774778468> The Falcon and the Winter Soldier",value:"If you're interested in watching The Falcon and the Winter Soldier with others here, just react to this message with \"<:falconwinter:816672565774778468>\""}
         )
     )});
 
