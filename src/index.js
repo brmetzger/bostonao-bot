@@ -22,6 +22,14 @@ const ROLES = {
         ID:"812008721450008576",
         Name:"In-Person Meetups"
     },
+    "🎮":{
+        ID:"819783826397200414",
+        Name:"Gaming"
+    },
+    "⚽":{
+        ID:"819784797295345704",
+        Name:"Soccer"
+    },
     "amongus":{
         ID:"816673017857179699",
         Name:"Among Us"
@@ -79,7 +87,9 @@ client.on("ready", async () => {
             {name:"<:amongus:816672242540871690> Among Us",value:"If you're interested in playing Among Us with others here, just react to this message with \"<:amongus:816672242540871690>\""},
             {name:"<:wut:807763650311356487> Bot Development",value:"If you're interested in partaking in or getting updates on the development of this bot, just react to this message with \"<:wut:807763650311356487>\""},
             {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
+            {name:"🎮 Gaming",value:"If you're into gaming in general and are open to playing games with others here, just react to this message with \"🎮\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
+            {name:"⚽ Soccer",value:"If you're interested in watching or playing soccer with others here, just react to this message with \"⚽\""},
             {name:"<:falconwinter:816672565774778468> The Falcon and the Winter Soldier",value:"If you're interested in watching The Falcon and the Winter Soldier with others here, just react to this message with \"<:falconwinter:816672565774778468>\""}
         )
     )});
