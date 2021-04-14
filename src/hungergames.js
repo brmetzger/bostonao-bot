@@ -65,9 +65,6 @@ function formatScenario(scenario,tributes) {
         };
     };
 
-    if (scenario.Tributes == 2 && tributes[0].Name == "Andrew" && tributes[1].Name == "Austin") {
-        return "Andrew pushes Austin up against a locker.";
-    };
     return output;
 };
 
