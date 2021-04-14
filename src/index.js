@@ -9,6 +9,7 @@ let Jesse = require("./jesse.js");
 let Memes = require("./memes.js");
 let Bible = require("./bible.js");
 let HungerGames = require("./hungergames.js");
+    HungerGames.Setup();
 let Util = require("./util.js");
 const STATUSES = require("./data/status.json");
 
