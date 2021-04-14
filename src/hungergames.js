@@ -95,6 +95,7 @@ async function handleSetting(sendmsg,tributes,killed,setting,haveWagers) {
 
     //Go through all the tributes
     while (use_tributes.length > 0) {
+        console.log(setting,scenarios[setting]);
         let scenario = scenarios[setting][Math.floor(Math.random() * scenarios[setting].length)];
         if (scenario.Tributes <= use_tributes.length) {
             let scenario_tributes = [];
