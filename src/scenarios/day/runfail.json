@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} kills ${P2} as ${P2he/she} tries to run.",
+    "Tributes":2,
+    "Killers":[1],
+    "Killed":[2]
+}

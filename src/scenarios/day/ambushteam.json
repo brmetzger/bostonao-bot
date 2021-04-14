@@ -1,0 +1,6 @@
+{
+    "Message":"${P1}, ${P2}, and ${P3} successfully ambush and kill ${P4}, ${P5}, and ${P6}.",
+    "Tributes":6,
+    "Killers":[1,2,3],
+    "Killed":[4,5,6]
+}

@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} convinces ${P2} not to kill ${P1him/her}, only to kill ${P2him/her} instead.",
+    "Tributes":2,
+    "Killers":[1],
+    "Killed":[2]
+}

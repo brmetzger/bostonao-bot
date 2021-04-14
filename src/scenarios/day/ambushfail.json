@@ -1,0 +1,6 @@
+{
+    "Message":"${P1}, ${P2}, and ${P3} unsuccessfully ambush ${P4}, ${P5}, and ${P6}, who kill them instead.",
+    "Tributes":6,
+    "Killers":[4,5,6],
+    "Killed":[1,2,3]
+}

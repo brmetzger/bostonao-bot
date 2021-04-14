@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} attempts to climb a tree, but falls on ${P2}, killing them both.",
+    "Tributes":2,
+    "Killers":[1],
+    "Killed":[1,2]
+}

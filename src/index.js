@@ -8,6 +8,7 @@ let config = require("./config.json");
 let Jesse = require("./jesse.js");
 let Memes = require("./memes.js");
 let Bible = require("./bible.js");
+let HungerGames = require("./hungergames.js");
 let Util = require("./util.js");
 const STATUSES = require("./data/status.json");
 
@@ -15,7 +16,8 @@ const STATUSES = require("./data/status.json");
 const COMMAND_MODULES = {
     [Jesse.Command]:Jesse,
     [Memes.Command]:Memes,
-    [Bible.Command]:Bible
+    [Bible.Command]:Bible,
+    [HungerGames.Command]:HungerGames
 };
 const ROLES = {
     "🏙️":{

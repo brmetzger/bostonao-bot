@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} taints ${P2}'s food, killing ${P2him/her}.",
+    "Tributes":2,
+    "Killers":[1],
+    "Killed":[2]
+}

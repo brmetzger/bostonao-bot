@@ -1,0 +1,6 @@
+{
+    "Message":"${P1}, ${P2}, and ${P3} get into a fight. ${P2} triumphantly kills them both.",
+    "Tributes":3,
+    "Killers":[2],
+    "Killed":[1,3]
+}

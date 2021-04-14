@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} poisons ${P2}'s drink. ${P2He/She} drinks it and dies.",
+    "Tributes":2,
+    "Killers":[1],
+    "Killed":[2]
+}

@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} and ${P2} track down and kill ${P3}.",
+    "Tributes":3,
+    "Killers":[1,2],
+    "Killed":[3]
+}

@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} forces ${P2} to kill ${P3} or ${P4}. ${P2He/She} decides to kill ${P4}.",
+    "Tributes":4,
+    "Killers":[2],
+    "Killed":[4]
+}

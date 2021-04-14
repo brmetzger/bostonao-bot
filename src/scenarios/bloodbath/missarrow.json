@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} shoots an arrow at ${P2}, but misses and kills ${P3} instead.",
+    "Tributes":3,
+    "Killers":[1],
+    "Killed":[3]
+}

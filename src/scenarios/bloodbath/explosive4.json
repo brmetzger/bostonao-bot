@@ -1,0 +1,6 @@
+{
+    "Message":"${P1} sets an explosive off, killing ${P2}, ${P3}, ${P4}, and ${P5}.",
+    "Tributes":5,
+    "Killers":[1],
+    "Killed":[2,3,4,5]
+}

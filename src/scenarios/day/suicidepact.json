@@ -1,0 +1,5 @@
+{
+    "Message":"${P1}, ${P2}, ${P3}, and ${P4} form a suicide pact, killing themselves.",
+    "Tributes":4,
+    "Killed":[1,2,3,4]
+}
