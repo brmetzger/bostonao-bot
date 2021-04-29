@@ -29,17 +29,9 @@ const ROLES = {
         ID:"819783826397200414",
         Name:"Gaming"
     },
-    "⚽":{
-        ID:"819784797295345704",
-        Name:"Soccer"
-    },
     "amongus":{
         ID:"816673017857179699",
         Name:"Among Us"
-    },
-    "falconwinter":{
-        ID:"816672924161146882",
-        Name:"The Falcon and the Winter Soldier"
     },
     "minecraft":{
         ID:"811378789786845204",
@@ -92,8 +84,6 @@ client.on("ready", async () => {
             {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
             {name:"🎮 Gaming",value:"If you're into gaming in general and are open to playing games with others here, just react to this message with \"🎮\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
-            {name:"⚽ Soccer",value:"If you're interested in watching or playing soccer with others here, just react to this message with \"⚽\""},
-            {name:"<:falconwinter:816672565774778468> The Falcon and the Winter Soldier",value:"If you're interested in watching The Falcon and the Winter Soldier with others here, just react to this message with \"<:falconwinter:816672565774778468>\""}
         )
     )});
 
