@@ -33,6 +33,10 @@ const ROLES = {
         ID:"816673017857179699",
         Name:"Among Us"
     },
+    "badbatch":{
+        ID:"839187262130356304",
+        Name:"Bad Batch"
+    },
     "minecraft":{
         ID:"811378789786845204",
         Name:"Minecraft"
@@ -84,6 +88,7 @@ client.on("ready", async () => {
             {name:"🏙 In-Person Meetups",value:"If you're in the city and are open to hanging out with other disciples in person, just react to this message with \"🏙\""},
             {name:"🎮 Gaming",value:"If you're into gaming in general and are open to playing games with others here, just react to this message with \"🎮\""},
             {name:"<:minecraft:811359879024476160> Minecraft",value:"If you're interested in playing Minecraft with others here, just react to this message with \"<:minecraft:811359879024476160>\""},
+            {name:"<:badbatch:839186560368771142> The Bad Batch",value:"If you're interested in watching The Bad Batch with others here, just react to this message with \"<:badbatch:839186560368771142>\""}
         )
     )});
 
